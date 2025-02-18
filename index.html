@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinéfolis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/lib s/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+  <div class="hamburger-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+   </div>
+    <ul>
+     <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="promo.html">Promo</a>
+      </li>
+      <li>
+        <a href="now-showing.html">Now Showing</a>
+      </li>
+        <li>
+        <a href="cinema.html">Cinema</a>
+      </li>
+      <li>
+        <a href="feedback.html">Feedback</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <div class="background-cinema">
+      <h1>Welcome to Sinéfolis</h1>
+      <h2>We operate 12 cinemas across Indonesia</h2>
+      <h2>with each cinema offering 5 screens for an unforgettable movie experience.</h2>
+    </div>
+  </section>
+  <section class="welcome">
+
+  </section>
+  <footer>
+  <p>© 2025 Sinéfolis. All rights reserved.</p>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="swipper.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navMenu = document.querySelector('nav ul');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  }
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Sinéfolis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="promo.html">Promo</a>
+      </li>
+      <li>
+        <a href="now-showing.html">Now Showing</a>
+      </li>
+        <li>
+        <a href="cinema.html">Cinema</a>
+      </li>
+      <li>
+        <a href="feedback.html">Feedback</a>
+      </li>
+    </ul>
+  </nav>
+ <section class="contact-us">
+    <div class="feedback">
+        <div class="feedback-card">
+            <h1 class="feedback-title">Please give us feedback</h1>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label class="form-label">Name</label>
+                    <input 
+                        type="text" 
+                        class="form-input" 
+                        name="name" 
+                        placeholder="Enter your name" 
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        class="form-input" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea 
+                        class="form-textarea" 
+                        name="message" 
+                        placeholder="Your feedback message" 
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    Submit Feedback
+                </button>
+            </form>
+        </div>
+        <div class="feedback-grid">
+            <div class="feedback-contact-card">
+                <div class="feedback-contact-item">
+                    <svg class="feedback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                    </svg>
+                    <div class="feedback-info">
+                        <h3>Email</h3>
+                        <p>Sinéfolis@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-contact-card">
+                <div class="feedback-contact-item">
+                    <svg class="feedback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                    <div class="feedback-info">
+                        <h3>Phone</h3>
+                        <p>+123-456-7890</p>
+                        <p class="hours">9 AM to 6 PM, Monday to Friday</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-contact-card">
+                <div class="feedback-contact-item">
+                    <svg class="feedback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                    </svg>
+                    <div class="feedback-info">
+                        <h3>Twitter</h3>
+                        <p>@Sinéfolis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-contact-card">
+                <div class="feedback-contact-item">
+                    <svg class="feedback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
+                    </svg>
+                    <div class="feedback-info">
+                        <h3>Instagram</h3>
+                        <p>@Sinéfolis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <footer>
+  <p>© 2025 Sinéfolis. All rights reserved.</p>
+  </footer>
+  <script src="toggle.js"></script>
+  <script>
+       document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navMenu = document.querySelector('nav ul');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  }
+});
+  </script>
+</body>
+</html>

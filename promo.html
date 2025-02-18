@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo - Sinéfolis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="promo.html">Promo</a>
+      </li>
+      <li>
+        <a href="now-showing.html">Now Showing</a>
+      </li>
+        <li>
+        <a href="cinema.html">Cinema</a>
+      </li>
+      <li>
+        <a href="feedback.html">Feedback</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="promo-section">
+        <h1 class="title">Check Our Latest Promos</h1>
+        <div class="swiper promo-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide promo-card">
+                    <img src="images/promo1.jpg" alt="Promo 1">
+                    <h2>Weekend Discount</h2>
+                    <p>Get 30% off on all movie tickets this weekend!</p>
+                    <span class="promo-code">WEEKEND30</span>
+                    <button class="copy-btn" onclick="copyPromo('WEEKEND30')">Copy Code</button>
+                </div>
+                <div class="swiper-slide promo-card">
+                    <img src="images/promo2.jpg" alt="Promo 2">
+                    <h2>Buy 1 Get 1 Free</h2>
+                    <p>Buy one ticket and get another for free on Wednesdays!</p>
+                    <span class="promo-code">BOGO</span>
+                    <button class="copy-btn" onclick="copyPromo('BOGO')">Copy Code</button>
+                </div>
+                <div class="swiper-slide promo-card">
+                    <img src="images/promo3.jpg" alt="Promo 3">
+                    <h2>Student Discount</h2>
+                    <p>Students get 20% off on weekdays. Show your ID at the counter.</p>
+                    <span class="promo-code">STUDENT20</span>
+                    <button class="copy-btn" onclick="copyPromo('STUDENT20')">Copy Code</button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+  <footer>
+  <p>© 2025 Sinéfolis. All rights reserved.</p>
+  </footer>
+  <script src="toggle.js"></script>
+  <script>
+       document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navMenu = document.querySelector('nav ul');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  }
+});
+  </script>
+</body>
+</html>
