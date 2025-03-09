@@ -6,7 +6,10 @@
     <title>Cinema - Sinéfolis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cinema.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <nav>
@@ -50,31 +53,8 @@
   <p>© 2025 Sinéfolis. All rights reserved.</p>
   </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="swipper.js"></script>
-    <script>
-       document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger-menu');
-  const navMenu = document.querySelector('nav ul');
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    document.querySelectorAll('nav ul li a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('nav')) {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      }
-    });
-  }
-});
-  </script>
+    <script src="js/script.js"></script>
+    <script src="js/swipper.js"></script>
+    <script src="js/hamburger-menu.js"></script>
 </body>
 </html>

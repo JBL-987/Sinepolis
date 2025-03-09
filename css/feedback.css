@@ -1,0 +1,120 @@
+.feedback {
+  max-width: clamp(500px, 80%, 1000px);
+  margin: clamp(150px, 10vh, 160px) auto 30px auto;
+  padding: clamp(10px, 2vw, 15px);
+  border-radius: 8px;
+  background: linear-gradient(to right, rgb(9, 9, 9));
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-title {
+  font-size: clamp(24px, 3vw, 28px);
+  margin-bottom: 1.5rem;
+  color: #e50914;
+  text-align: center;
+}
+
+.feedback-card {
+  background: #000000;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e50914;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: clamp(14px, 1.8vw, 16px);
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: #141414;
+  border: 1px solid #e50914;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #ff0000;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #ff0000;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.feedback-contact-card {
+  background: #000000;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #e50914;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.feedback-contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff0000;
+}
+
+.feedback-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feedback-icon {
+  width: 24px;
+  height: 24px;
+  color: #e50914;
+}
+
+.feedback-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.feedback-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.feedback-info .hours {
+  font-size: 0.75rem;
+  color: #666;
+}

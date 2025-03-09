@@ -1,32 +1,7 @@
-const API_KEY = "cd5f64d3510476839238b8c920f35494";
+const API_KEY = "cd5f64d3510476839238b8c920f35494"; //free api key feel free to use
 const BASE_URL = "https://api.themoviedb.org/3";
 const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 const YOUTUBE_BASE_URL = "https://www.youtube.com/embed/";
-
-const searchMovie = async (query, containerId = "search-results") => {
-    try {
-        const [movieResponse] = await Promise.all([
-            fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}&language=en-US`),
-        ]);
-        const movieData = await movieResponse.json();
-        const movieresults = [];
-        if (movieData.results) {
-            movieData.results.forEach(movie => {
-                movieresults.push({
-                    ...movie,
-                    type: 'movie',
-                    title: movie.title,
-                    mediaId: movie.id
-                });
-            });
-        }
-        movieresults.sort((a, b) => b.popularity - a.popularity);
-        renderCombinedResults(movieresults, containerId);
-        initializeSwiper(containerId);
-    } catch (error) {
-        console.error("Error fetching content:", error);
-    }
-};
 
 const renderCombinedResults = (results, containerId) => {
     const container = document.querySelector(`#${containerId} .swiper-wrapper`);
@@ -113,19 +88,9 @@ const fetchMovieTrailer = async (movieId) => {
     }
 };
 
-const searchContent = async (event) => {
-    event.preventDefault();
-    const searchInput = document.querySelector("#search");
-    const query = searchInput.value.trim();
-    if (!query) return;
-    window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
-};
-
 const initializeSwiper = (containerId) => {
     const swiperMapping = {
-        'in-theaters': 'theatersSwiper',
-        'trending-movie': 'trendingSwiper',
-        'top-movies': 'topSwiper',
+        'in-theaters': 'theatersSwiper'
     };
     const swiperClass = swiperMapping[containerId];
     if (!swiperClass) return;
@@ -163,11 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchMovies("now_playing", "in-theaters");
-    fetchMovies("popular", "trending-movie");
-    fetchMovies("top_rated", "top-movies");
 });
-
-const searchform = document.querySelector(".search-bar");
-if (searchform) {
-    searchform.addEventListener("submit", searchContent);
-}

@@ -1,0 +1,132 @@
+/* Hero section with background */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-poster {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: clamp(15px, 3vw, 30px);
+  overflow: hidden;
+}
+
+.background-poster::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/poster.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; 
+  z-index: -1; 
+}
+
+.in-theaters {
+  max-width: clamp(300px, 90%, 1000px);
+  margin: clamp(25px, 5vh, 50px) auto;
+  padding: clamp(15px, 3vw, 30px);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+.in-theaters h1 {
+  font-size: clamp(24px, 3vw, 28px);
+  margin-bottom: 1.5rem;
+  color: #e50914;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.swiper {
+  width: clamp(300px, 90%, 1200px);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: visible;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: clamp(250px, 80vw, 300px);
+  height: clamp(375px, 60vh, 450px);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, #0004);
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-slide-shadow-left, .swiper-slide-shadow-right {
+  border-radius: 10px;
+}
+
+.swiper-slide-active {
+  z-index: 3;
+}
+
+.swiper-slide-active img {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+  transform: translateY(-10px);
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0.6;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e50914;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.swiper-grab {
+  cursor: grab;
+}
+
+.swiper-grabbing {
+  cursor: grabbing;
+}

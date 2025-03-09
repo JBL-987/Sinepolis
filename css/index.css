@@ -1,0 +1,88 @@
+.background-home {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 250vh;
+  top: -50px;
+  left: -250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: clamp(15px, 3vw, 30px);
+}
+
+.background-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; 
+  z-index: -1; 
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004); 
+}
+
+.background-home h1 {
+  font-size: clamp(30px, 5vw, 60px);
+  font-weight: 600;
+  margin-bottom: clamp(10px, 2vw, 10px);
+  color: rgb(250, 0, 0);
+  z-index: 1;
+}
+
+.background-home h2 {
+  font-size: clamp(18px, 3vw, 30px);
+  font-weight: 600;
+  margin-bottom: clamp(10px, 2vw, 20px);
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.swiper { 
+  width: clamp(300px, 90%, 1200px);
+  padding-top: 50px; 
+}
+
+.swiper-slide { 
+  background-position: center; 
+  background-size: cover; 
+  width: clamp(250px, 80vw, 300px);
+  height: clamp(375px, 60vh, 450px);
+  border-radius: 10px; 
+}
+
+.swiper-slide img { 
+  display: block; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, #0004); 
+}
+
+.swiper-pagination { 
+  background-color: rgb(255, 255, 255); 
+  display: none !important;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+}
+
+.in-theaters, .search-results {
+  max-width: clamp(300px, 90%, 1000px);
+  margin: clamp(25px, 5vh, 50px) auto;
+  padding: clamp(15px, 3vw, 30px);
+  text-align: center;
+  background: linear-gradient(to right, rgb(9, 9, 9)); 
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

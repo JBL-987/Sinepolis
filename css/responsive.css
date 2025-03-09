@@ -1,0 +1,169 @@
+@media screen and (max-width: 768px) {
+  nav {
+    height: 60px;
+    padding: 0 15px;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  nav ul {
+    position: fixed;
+    left: -200%;
+    top: 60px;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 50%; 
+    height: calc(100vh - 60px);
+    text-align: center;
+    transition: 0.3s;
+    padding-top: 20px;
+    z-index: 1000;
+  }
+  
+  nav ul.active {
+    left: 0;
+    right: auto;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    justify-content: flex-start;
+  }
+  
+  nav ul li {
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  nav ul li a {
+    font-size: 20px;
+  }
+  
+  .background-home, .background-cinema, .background-poster {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 80px 15px 20px;
+  }
+  
+  .background-home::before, .background-cinema::before, .background-poster::before {
+    background-position: center;
+  }
+  
+  .search-bar {
+    width: 90%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .swiper {
+    width: 95%;
+    padding-top: 30px;
+  }
+  
+  .swiper-slide {
+    width: 250px;
+    height: 375px;
+  }
+  
+  .in-theaters, .search-results {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  .feedback-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feedback-contact-card {
+    padding: 10px;
+  }
+  
+  .feedback-info h3 {
+    font-size: 16px;
+  }
+  
+  .feedback-info p {
+    font-size: 12px;
+  }
+  
+  .feedback-info .hours {
+    font-size: 10px;
+  }
+  
+  .movie-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  #movie-title {
+    font-size: 22px;
+  }
+  
+  #movie-poster {
+    max-height: 300px;
+  }
+  
+  #movie-overview {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  
+  #movie-rating {
+    font-size: 14px;
+  }
+  
+  #movie-trailer {
+    width: 95%;
+  }
+  
+  footer {
+    min-height: 60px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .background-home h1, .background-cinema h1, .background-poster h1 {
+    font-size: 28px;
+  }
+  
+  .background-home h2, .background-cinema h2, .background-poster h2 {
+    font-size: 18px;
+  }
+  
+  .swiper-slide {
+    width: 220px;
+    height: 330px;
+  }
+  
+  .search-bar {
+    max-width: 250px;
+  }
+  
+  .search-bar input {
+    font-size: 14px;
+  }
+  
+  #movie-poster {
+    max-height: 250px;
+  }
+  
+  .feedback-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
