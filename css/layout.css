@@ -32,6 +32,7 @@ nav ul li a {
 
 nav ul li a:hover { 
   color: black; 
+  text-decoration: underline;
 }
 
 .hamburger-menu {
@@ -52,7 +53,6 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
-/* Search Bar */
 .search-bar {
   display: flex;
   align-items: center;

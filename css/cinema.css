@@ -1,46 +1,88 @@
-.background-cinema {
-  position: relative;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../images/cinema.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  width: 250vh;
-  top: -50px;
-  left: -250px;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.cinema-section {
+  max-width: 1200px;
+  margin: 80px auto 30px auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: clamp(24px, 3vw, 28px);
+  margin-bottom: 1.5rem;
+  color: #e50914;
   text-align: center;
-  color: white;
-  padding: clamp(15px, 3vw, 30px);
 }
 
-.background-cinema::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.single-location {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.location-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #e50914;
+}
+
+.location-card img {
   width: 100%;
-  height: 100%;
-  background-image: url('images/cinema.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5; 
-  z-index: -1; 
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
-.background-cinema h1 {
-  font-size: clamp(30px, 5vw, 60px);
-  font-weight: 600;
-  margin-bottom: clamp(10px, 2vw, 20px);
-  color: rgb(255, 255, 255);
-  z-index: 1;
+.loaction-card h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: clamp(18px, 2.5vw, 24px);
 }
 
-.background-cinema h2 {
-  font-size: clamp(18px, 3vw, 30px);
-  font-weight: 600;
-  margin-bottom: clamp(10px, 2vw, 20px);
-  color: rgb(255, 0, 0);
-  z-index: 1;
+.location-card p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.location-address{
+  display: block;
+  background-color: #141414;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #e50914;
+  border: 1px dashed #e50914;
+}
+
+.copy-btn {
+  background-color: #e50914;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+.copy-btn:hover {
+  background-color: #ff0000;
 }

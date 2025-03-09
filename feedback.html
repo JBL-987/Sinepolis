@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback - Sinéfolis</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -38,16 +37,18 @@
       </li>
     </ul>
   </nav>
- <section class="contact-us">
+
+ <section class="feedback-section">
     <div class="feedback">
         <div class="feedback-card">
             <h1 class="feedback-title">Please give us feedback</h1>
-            <form id="feedbackForm">
+            <form id="feedbackForm" onsubmit= "return sendfeedback(feedbackmessage)">
                 <div class="form-group">
                     <label class="form-label">Name</label>
                     <input 
                         type="text" 
                         class="form-input" 
+                        id="name"
                         name="name" 
                         placeholder="Enter your name" 
                         required
@@ -58,8 +59,20 @@
                     <input 
                         type="email" 
                         class="form-input" 
+                        id="email"
                         name="email" 
                         placeholder="Enter your email" 
+                        required
+                    >
+                </div>
+                 <div class="form-group">
+                    <label class="form-label">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        class="form-input" 
+                        id="phone"
+                        name="phone" 
+                        placeholder="Enter your Phone Number" 
                         required
                     >
                 </div>
@@ -67,6 +80,7 @@
                     <label class="form-label">Message</label>
                     <textarea 
                         class="form-textarea" 
+                        id="message"
                         name="message" 
                         placeholder="Your feedback message" 
                         required
@@ -127,9 +141,13 @@
         </div>
     </div>
 </section>
+
   <footer>
   <p>© 2025 Sinéfolis. All rights reserved.</p>
   </footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/feedback.js"></script>
   <script src="js/toggle.js"></script>
   <script src="js/hamburger-menu.js"></script>
 </body>

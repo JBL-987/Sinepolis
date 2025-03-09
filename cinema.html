@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema - Sinéfolis</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -13,13 +12,13 @@
 </head>
 <body>
   <nav>
-  <div class="hamburger-menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-   </div>
+    <div class="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
     <ul>
       <li>
         <a href="/">Home</a>
@@ -30,31 +29,34 @@
       <li>
         <a href="now-showing.html">Now Showing</a>
       </li>
-        <li>
+      <li>
         <a href="cinema.html">Cinema</a>
       </li>
       <li>
         <a href="feedback.html">Feedback</a>
       </li>
     </ul>
-    <form class="search-bar">
-      <input type="text" id="search" name="query" placeholder="Search for our location">
-      <button type="submit"><i class="fa fa-search"></i>
-    </button>
-    </form>
   </nav>
-  <section class="hero">
-    <div class="background-cinema">
-    <h1>Our detailed information</h1>
-    <h2>about Sinéfolis branches across Indonesia</h2>
+  
+  <section class="cinema-section">
+    <div class="single-location">
+      <div class="location-card">
+        <h1 class="title">The list of our location</h1>
+        <img src="images/promo.jpg" alt="Promo">
+        <h2>Copy the location address here</h2>
+        <span class="location-address">Sinéfolisisthebest</span>
+        <button class="copy-btn" onclick="address('WEEKEND30')">Copy address</button>
+      </div>
     </div>
   </section>
+  
   <footer>
-  <p>© 2025 Sinéfolis. All rights reserved.</p>
+    <p>© 2025 Sinéfolis. All rights reserved.</p>
   </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/swipper.js"></script>
-    <script src="js/hamburger-menu.js"></script>
+  
+  <script src="js/toggle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/hamburger-menu.js"></script>
+  <script src="js/cinema.js"></script>
 </body>
 </html>

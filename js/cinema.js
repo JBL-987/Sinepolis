@@ -1,13 +1,13 @@
-function copyPromo(code) {
-      navigator.clipboard.writeText(code)
+function address(location) {
+      navigator.clipboard.writeText(location)
         .then(() => {
             Swal.fire({
-                title: "Promo code copied to clipboard!",
+                title: "Address copied to clipboard!",
                 icon: "success"
             });
         })
         .catch(err => {
-            console.error("Error copying promo code:", err);
+          console.error("Error copying address:", err);
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
