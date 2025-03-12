@@ -42,7 +42,7 @@
     <div class="feedback">
         <div class="feedback-card">
             <h1 class="feedback-title">Please give us feedback</h1>
-            <form id="feedbackForm" onsubmit= "return sendfeedback(feedbackmessage)">
+            <form id="feedbackForm" onsubmit= "return sendfeedback(event)">
                 <div class="form-group">
                     <label class="form-label">Name</label>
                     <input 
@@ -145,7 +145,6 @@
   <footer>
   <p>© 2025 Sinéfolis. All rights reserved.</p>
   </footer>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/feedback.js"></script>
   <script src="js/toggle.js"></script>

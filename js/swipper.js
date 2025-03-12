@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Inisialisasi Swiper dan simpan dalam variabel global
     window.swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
@@ -14,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         pagination: {
             el: ".swiper-pagination",
+            clickable: true,
+        }, 
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         }
     });
     

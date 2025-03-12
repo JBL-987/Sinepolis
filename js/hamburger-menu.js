@@ -5,7 +5,7 @@ if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
-});
+    });
     document.querySelectorAll('nav ul li a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
