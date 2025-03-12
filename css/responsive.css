@@ -120,38 +120,38 @@
     width: 95%;
   }
   
-  .cinema-section {
+ .cinema-section {
     margin: 60px auto 20px auto;
   }
-  
+
   .section-title {
     font-size: 24px;
     margin-bottom: 1.5rem;
   }
-  
+
   .locations-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-  
+
   .location-card {
     padding: 1rem;
   }
-  
+
   .location-card img {
     height: 160px;
     margin-bottom: 0.75rem;
   }
-  
+
   .location-details p {
     font-size: 14px;
   }
-  
+
   .location-address {
     padding: 0.5rem;
     margin: 0.75rem 0;
     font-size: 12px;
   }
-  
+
   .copy-btn {
     padding: 0.5rem 1rem;
     font-size: 12px;
