@@ -1,4 +1,4 @@
-function address(location) {
+function copyAddress(location) {
       navigator.clipboard.writeText(location)
         .then(() => {
             Swal.fire({
