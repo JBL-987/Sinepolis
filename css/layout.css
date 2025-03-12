@@ -94,11 +94,10 @@ nav ul li a:hover {
   color: black;
 }
 
-/* Footer */
 footer {
   background-color: rgb(250, 0, 0);
   width: 100%;
-  min-height: 80px;
+  min-height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -26,7 +26,7 @@
     top: 60px;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
-    width: 50%; 
+    width: 50%;
     height: calc(100vh - 60px);
     text-align: center;
     transition: 0.3s;
@@ -41,10 +41,12 @@
     padding-left: 0;
     text-align: center;
     justify-content: flex-start;
+    width: 50%;
+    padding-top: 0;
   }
   
   nav ul li {
-    margin: 20px 0;
+    margin: 15px 0;
     width: 100%;
   }
   
@@ -64,45 +66,32 @@
     background-position: center;
   }
   
-  .search-bar {
-    width: 90%;
-    max-width: 280px;
-    margin: 0 auto;
+  body {
+    background-attachment: fixed;
   }
-  
+
   .swiper {
     width: 95%;
     padding-top: 30px;
   }
   
   .swiper-slide {
-    width: 250px;
-    height: 375px;
+    width: clamp(180px, 40vw, 240px);
+    height: clamp(270px, 60vw, 360px);
   }
   
-  .in-theaters, .search-results {
+  .swiper-button-next, .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .in-theaters {
     margin: 20px auto;
     padding: 15px;
   }
   
-  .feedback-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .feedback-contact-card {
-    padding: 10px;
-  }
-  
-  .feedback-info h3 {
-    font-size: 16px;
-  }
-  
-  .feedback-info p {
-    font-size: 12px;
-  }
-  
-  .feedback-info .hours {
-    font-size: 10px;
+  .movie-info .overview {
+    -webkit-line-clamp: 3;
   }
   
   .movie-container {
@@ -131,39 +120,77 @@
     width: 95%;
   }
   
-  footer {
-    min-height: 60px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .background-home h1, .background-cinema h1, .background-poster h1 {
-    font-size: 28px;
+  .cinema-section {
+    margin: 60px auto 20px auto;
   }
   
-  .background-home h2, .background-cinema h2, .background-poster h2 {
-    font-size: 18px;
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
   }
   
-  .swiper-slide {
-    width: 220px;
-    height: 330px;
+  .locations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
   
-  .search-bar {
-    max-width: 250px;
+  .location-card {
+    padding: 1rem;
   }
   
-  .search-bar input {
+  .location-card img {
+    height: 160px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .location-details p {
     font-size: 14px;
   }
   
-  #movie-poster {
-    max-height: 250px;
+  .location-address {
+    padding: 0.5rem;
+    margin: 0.75rem 0;
+    font-size: 12px;
+  }
+  
+  .copy-btn {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+  
+  .feedback {
+    padding: 20px;
+  }
+  
+  .feedback-title {
+    font-size: 24px;
   }
   
   .feedback-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+  }
+  
+  .feedback-contact-card {
+    padding: 10px;
+  }
+  
+  .feedback-info h3 {
+    font-size: 16px;
+  }
+  
+  .feedback-info p {
+    font-size: 12px;
+  }
+  
+  .feedback-info .hours {
+    font-size: 10px;
+  }
+  
+  .form-input, .form-textarea {
+    padding: 0.75rem;
+  }
+  
+  footer {
+    min-height: 60px;
+    font-size: 12px;
   }
 }

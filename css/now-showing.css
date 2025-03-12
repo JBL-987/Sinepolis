@@ -229,7 +229,6 @@
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: #e50914;
   opacity: 0.5;
   transition: all 0.3s ease;
 }
@@ -237,73 +236,4 @@
 .swiper-pagination-bullet-active {
   opacity: 1;
   transform: scale(1.2);
-}
-
-@media (max-width: 1200px) {
-  .swiper-slide {
-    width: clamp(220px, 25vw, 280px);
-    height: clamp(330px, 38vw, 420px);
-  }
-}
-
-@media (max-width: 991px) {
-  .hero {
-    height: auto;
-    min-height: 100vh;
-  }
-  
-  .background-poster {
-    height: auto;
-    min-height: 100vh;
-    padding-bottom: 50px;
-  }
-  
-  .movie-info-container {
-    margin-top: 20px;
-  }
-  
-  .swiper {
-    padding-bottom: 60px;
-  }
-}
-
-@media (max-width: 768px) {
-  .swiper-slide {
-    width: clamp(180px, 40vw, 240px);
-    height: clamp(270px, 60vw, 360px);
-  }
-  
-  .movie-info .overview {
-    -webkit-line-clamp: 3;
-  }
-  
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 576px) {
-  .in-theaters h1 {
-    font-size: clamp(24px, 5vw, 32px);
-  }
-  
-  .swiper-slide {
-    width: clamp(160px, 60vw, 220px);
-    height: clamp(240px, 90vw, 330px);
-  }
-  
-  .movie-info h2 {
-    font-size: 22px;
-  }
-  
-  .movie-info .overview {
-    -webkit-line-clamp: 2;
-  }
-  
-  .book-btn {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
 }

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema - Sinéfolis</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -40,57 +39,42 @@
   </nav>
   
   <section class="promo-section">
-    <h1 class="section-title">Sinéfolis Promo</h1>
-    <div class="swiper-container mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="promo-card">
-            <img src="images/promo1.jpg" alt="Downtown Theater">
-            <h2>Claim this promo1</h2>
-            <div class="promo-details">
-              <p>Buy 1 ticket for 1 ticket</p>
-            </div>
-            <span class="promo-code">Sinéfolisisthebest</span>
-            <button class="copy-btn" onclick="copyPromo('Sinéfolisisthebest')">Copy Code</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="promo-card">
-            <img src="images/promo2.jpg" alt="Westside Cinema">
-            <h2>Claim this promo2</h2>
-            <div class="promo-details">
-              <p>Buy 2 ticket for 2 popcorns</p>
-            </div>
-            <span class="promo-code">Moreticketsplease</span>
-            <button class="copy-btn"  onclick="copyPromo('Moreticketsplease')">Copy Code</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="promo-card">
-            <img src="images/promo3.jpg" alt="Eastside Multiplex">
-            <h2>Claim this promo3</h2>
-            <div class="promo-details">
-              <p>Buy 2 popcorns for 1 coca-cola</p>
-            </div>
-            <span class="promo-code">Cokeisgood</span>
-            <button class="copy-btn"  onclick="copyPromo('Cokeisgood')">Copy Code</button>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="promo-card">
-            <img src="images/promo4.jpg" alt="Northgate Cinema">
-            <h2>Claim this promo4</h2>
-            <div class="promo-details">
-              <p>Buy ticket with Gopay</p>
-            </div>
-            <span class="promo-code">Gopayisontop</span>
-            <button class="copy-btn" onclick="copyPromo('Gopayisontop')">Copy Code</button>
-        </div>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+  <h1 class="section-title">Sinéfolis Promo</h1>
+  <div class="promo-card">
+    <img src="images/promo1.jpg" alt="Promo 1">
+    <h2>Special Offer!</h2>
+    <div class="promo-details">
+      <p>Buy 1 ticket for 1 ticket</p>
+    </div>
+    <span class="promo-code">Sinéfolisisthebest</span>
+    <button class="copy-btn" onclick="copyPromo('Sinéfolisisthebest')">Copy Code</button>
+  </div>
+  <div class="promo-card">
+    <img src="images/promo2.jpg" alt="Promo 2">
+    <h2>Special Offer!</h2>
+    <div class="promo-details">
+      <p>Buy 2 ticket for 2 popcorns</p>
+    </div>
+    <span class="promo-code">Moreticketsplease</span>
+    <button class="copy-btn" onclick="copyPromo('Moreticketsplease')">Copy Code</button>
+  </div>
+  <div class="promo-card">
+    <img src="images/promo3.jpg" alt="Promo 3">
+    <h2>Special Offer!</h2>
+    <div class="promo-details">
+      <p>Buy 2 popcorns for 1 coca-cola</p>
+    </div>
+    <span class="promo-code">Cokeisgood</span>
+    <button class="copy-btn" onclick="copyPromo('Cokeisgood')">Copy Code</button>
+  </div>
+  <div class="promo-card">
+    <img src="images/promo4.jpg" alt="Promo 4">
+    <h2>Special Offer!</h2>
+    <div class="promo-details">
+      <p>Buy ticket with Gopay</p>
+    </div>
+    <span class="promo-code">Gopayisontop</span>
+    <button class="copy-btn" onclick="copyPromo('Gopayisontop')">Copy Code</button>
     </div>
   </section>
   
@@ -98,8 +82,6 @@
     <p>© 2025 Sinéfolis. All rights reserved.</p>
   </footer>
   
-  <script src="js/swipper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/hamburger-menu.js"></script>
   <script src="js/promo.js"></script>
