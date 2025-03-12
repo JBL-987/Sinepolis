@@ -48,3 +48,55 @@
   border-radius: 8px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
+.movie-schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: clamp(14px, 1.8vw, 18px);
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-schedule th, .movie-schedule td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.movie-schedule th {
+  background-color: #e50914;
+  color: white;
+  text-transform: uppercase;
+}
+
+.movie-schedule tbody tr:nth-child(odd) {
+  background-color: #333;
+}
+
+.movie-schedule tbody tr:nth-child(even) {
+  background-color: #444;
+}
+
+#book-now {
+  background-color: #e50914;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  margin: 20px auto;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px auto;
+}
+
+#book-now:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
