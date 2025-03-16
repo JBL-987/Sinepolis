@@ -34,7 +34,7 @@ const updateBackgroundImage = (backdropPath) => {
         backgroundElement.style.backgroundImage = `url(${BACKDROP_URL}${backdropPath})`;
         console.log("Background updated to:", backdropPath);
     } else {
-        console.error("Element .background-poster tidak ditemukan");
+        console.error("Background-poster not found");
     }
 };
 
