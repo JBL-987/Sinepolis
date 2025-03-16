@@ -114,10 +114,3 @@
   opacity: 1;
   background: #e50914;
 }
-
-@media (max-width: 640px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-}
