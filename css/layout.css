@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav {
   background-color: rgb(120, 0, 1);
   position: fixed;
@@ -59,7 +65,7 @@ footer {
   left: 0;
   background-color: rgb(120, 0, 1);
   width: 100%;
-  min-height: 110px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
