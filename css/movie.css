@@ -1,3 +1,10 @@
+body {
+  background-image: url('../images/movie.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .movie-container {
   max-width: clamp(300px, 90%, 800px);
   margin: clamp(25px, 5vh, 50px) auto;
