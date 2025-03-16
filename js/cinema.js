@@ -1,6 +1,6 @@
 let swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
+      slidesPerView: 5,
+      spaceBetween: 2,
       loop: true,
       pagination: {
         el: ".swiper-pagination",

@@ -268,23 +268,3 @@ body {
 #book-now:hover::before {
   left: 100%;
 }
-
-@media (max-width: 768px) {
-  .movie-container {
-    padding: 15px;
-  }
-  
-  #movie-title {
-    font-size: 24px;
-  }
-  
-  .movie-schedule th, .movie-schedule td {
-    padding: 10px 8px;
-    font-size: 14px;
-  }
-  
-  .time-chip {
-    padding: 4px 8px;
-    font-size: 11px;
-  }
-}
