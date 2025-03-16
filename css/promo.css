@@ -1,3 +1,10 @@
+body {
+  background-image: url('../images/promo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .promo-section {
   margin: 100px 0 30px;
   display: flex;
@@ -50,7 +57,7 @@
 }
 
 .promo-card h2 {
-  color: #e50914;
+  color: #ffffff;
   padding: 15px 15px 5px;
   font-size: clamp(18px, 2vw, 22px);
   text-align: center;
