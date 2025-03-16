@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema - Sinéfolis</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -19,27 +21,31 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
-    <ul>
-     <li>
-        <a href="/">Home</a>
+    <img src="/images/logo.jpeg" alt="Sinéfolis" style="width: 5rem; height: auto;">
+   <ul>
+      <li>
+        <a href="/"><i class="fas fa-home"></i> Home</a>
       </li>
       <li>
-        <a href="promo.html">Promo</a>
+        <a href="promo.html"><i class="fas fa-tags"></i> Promo</a>
       </li>
       <li>
-        <a href="now-showing.html">Now Showing</a>
-      </li>
-        <li>
-        <a href="cinema.html">Cinema</a>
+        <a href="now-showing.html"><i class="fas fa-film"></i> Now Showing</a>
       </li>
       <li>
-        <a href="feedback.html">Feedback</a>
+        <a href="cinema.html"><i class="fas fa-ticket"></i> Cinema</a>
+      </li>
+      <li>
+        <a href="feedback.html"><i class="fas fa-comment"></i> Feedback</a>
       </li>
     </ul>
   </nav>
   
   <section class="cinema-section">
     <h1 class="section-title">12 Sinéfolis Locations</h1>
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location.jpg" alt="Grand Indonesia">
       <h2>Grand Indonesia</h2>
@@ -49,6 +55,8 @@
       <span class="cinema-address">Jl. M.H. Thamrin No.1, Jakarta Pusat</span>
       <button class="copy-btn" onclick="copyAddress('Jl. M.H. Thamrin No.1, Jakarta Pusat')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location1.jpg" alt="Pondok Indah Mall">
       <h2>Pondok Indah Mall</h2>
@@ -58,6 +66,8 @@
       <span class="cinema-address">Jl. Metro Pondok Indah, Jakarta Selatan</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Metro Pondok Indah, Jakarta Selatan')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location2.jpg" alt="Tunjungan Plaza">
       <h2>Tunjungan Plaza</h2>
@@ -67,6 +77,8 @@
       <span class="cinema-address">Jl. Embong Malang No.21, Surabaya</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Embong Malang No.21, Surabaya')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location3.jpg" alt="Beachwalk Mall">
       <h2>Beachwalk Mall</h2>
@@ -76,6 +88,8 @@
       <span class="cinema-address">Jl. Pantai Kuta, Badung, Bali</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Pantai Kuta, Badung, Bali')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location4.jpg" alt="Paris Van Java">
       <h2>Paris Van Java</h2>
@@ -85,6 +99,8 @@
       <span class="cinema-address">Jl. Sukajadi, Bandung</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Sukajadi, Bandung')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location5.jpg" alt="Plaza Senayan">
       <h2>Plaza Senayan</h2>
@@ -94,6 +110,8 @@
       <span class="cinema-address">Jl. Asia Afrika No.8, Jakarta Pusat</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Asia Afrika No.8, Jakarta Pusat')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location6.jpg" alt="Trans Studio Mall">
       <h2>Trans Studio Mall</h2>
@@ -103,6 +121,8 @@
       <span class="cinema-address">Jl. Gatot Subroto No.289, Bandung</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Gatot Subroto No.289, Bandung')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location7.jpg" alt="Central Park Mall">
       <h2>Central Park Mall</h2>
@@ -112,6 +132,8 @@
       <span class="cinema-address">Jl. Letjen S. Parman, Jakarta Barat</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Letjen S. Parman, Jakarta Barat')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location8.jpg" alt="Mall Taman Anggrek">
       <h2>Mall Taman Anggrek</h2>
@@ -121,6 +143,8 @@
       <span class="cinema-address">Jl. Letjen S. Parman No.21, Jakarta Barat</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Letjen S. Parman No.21, Jakarta Barat')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location9.jpg" alt="Senayan City">
       <h2>Senayan City</h2>
@@ -130,6 +154,8 @@
       <span class="cinema-address">Jl. Asia Afrika No.19, Jakarta Pusat</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Asia Afrika No.19, Jakarta Pusat')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location10.jpg" alt="Pakuwon Mall">
       <h2>Pakuwon Mall</h2>
@@ -139,6 +165,8 @@
       <span class="cinema-address">Jl. Puncak Indah Lontar No.2, Surabaya</span>
       <button class="copy-btn" onclick="copyAddress('Jl. Puncak Indah Lontar No.2, Surabaya')">Copy Address</button>
     </div>
+    </div>
+    <div class="swiper-slide">
     <div class="cinema-card">
       <img src="images/Location11.jpg" alt="Living World">
       <h2>Living World</h2>
@@ -148,12 +176,19 @@
       <span class="cinema-address">Jl. BSD Raya Utama, Tangerang Selatan</span>
       <button class="copy-btn" onclick="copyAddress('Jl. BSD Raya Utama, Tangerang Selatan')">Copy Address</button>
     </div>
+    </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    </div>
   </section>
   
   <footer>
     <p>© 2025 Sinéfolis. All rights reserved.</p>
   </footer>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/hamburger-menu.js"></script>
   <script src="js/cinema.js"></script>

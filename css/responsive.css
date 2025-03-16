@@ -94,15 +94,24 @@
     -webkit-line-clamp: 3;
   }
   
-  .movie-container {
-    margin: 20px auto;
+   .movie-container {
     padding: 15px;
   }
   
   #movie-title {
-    font-size: 22px;
+    font-size: 24px;
   }
   
+  .movie-schedule th, .movie-schedule td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+  .time-chip {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+    
   #movie-poster {
     max-height: 300px;
   }

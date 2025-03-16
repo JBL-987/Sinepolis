@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie - Sinéfolis</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -19,100 +20,187 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
+    <img src="/images/logo.jpeg" alt="Sinéfolis" style="width: 5rem; height: auto;">
     <ul>
-     <li>
-        <a href="/">Home</a>
+      <li>
+        <a href="/"><i class="fas fa-home"></i> Home</a>
       </li>
       <li>
-        <a href="promo.html">Promo</a>
+        <a href="promo.html"><i class="fas fa-tags"></i> Promo</a>
       </li>
       <li>
-        <a href="now-showing.html">Now Showing</a>
-      </li>
-        <li>
-        <a href="cinema.html">Cinema</a>
+        <a href="now-showing.html"><i class="fas fa-film"></i> Now Showing</a>
       </li>
       <li>
-        <a href="feedback.html">Feedback</a>
+        <a href="cinema.html"><i class="fas fa-ticket"></i> Cinema</a>
+      </li>
+      <li>
+        <a href="feedback.html"><i class="fas fa-comment"></i> Feedback</a>
       </li>
     </ul>
-    </nav>
+  </nav>
 
-    <section>
+  <section>
     <div class="movie-container">
-        <h1 id="movie-title"></h1>
-        <img id="movie-poster" alt="Movie Poster">
-        <p id="movie-overview"></p>
-        <p><strong>Rating:</strong> <span id="movie-rating"></span></p>
-        <iframe id="movie-trailer" width="560" height="415" frameborder="0" allowfullscreen></iframe>
-        <p><strong>Schedule for this movie for every Sinéfolis locations:</strong></p>
-        <div class="movie-schedule">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Times</th>
-                        <th>Theater</th>
-                        <th>Format</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>10:30 AM, 1:45 PM, 4:30 PM, 7:15 PM, 10:00 PM</td>
-                        <td>Theater 1, 3</td>
-                        <td>Standard, 3D</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>10:30 AM, 1:45 PM, 4:30 PM, 7:15 PM, 10:00 PM</td>
-                        <td>Theater 1, 3</td>
-                        <td>Standard, 3D</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>10:30 AM, 1:45 PM, 4:30 PM, 7:15 PM, 10:00 PM</td>
-                        <td>Theater 1, 3</td>
-                        <td>Standard, 3D</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>10:30 AM, 1:45 PM, 4:30 PM, 7:15 PM, 10:00 PM</td>
-                        <td>Theater 2, 4</td>
-                        <td>Standard, IMAX</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>11:00 AM, 2:00 PM, 5:00 PM, 8:00 PM, 10:45 PM</td>
-                        <td>Theater 2, 4, 5</td>
-                        <td>Standard, IMAX, 3D</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>11:00 AM, 2:00 PM, 5:00 PM, 8:00 PM, 10:45 PM</td>
-                        <td>Theater 2, 4, 5</td>
-                        <td>Standard, IMAX, 3D</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>11:00 AM, 2:00 PM, 5:00 PM, 8:00 PM</td>
-                        <td>Theater 2, 4, 5</td>
-                        <td>Standard, IMAX, 3D</td>
-                    </tr>
-                </tbody>
-            </table>
+      <h1 id="movie-title"></h1>
+      
+      <div class="movie-info-container">
+        <div class="poster-container">
+          <img id="movie-poster" alt="Movie Poster">
         </div>
-        <button id="book-now" class="book-button" onclick="bookticket()">Book Now</button>
+        
+        <div class="info-container">
+          <div class="movie-details">
+            <div class="movie-meta">
+              <div class="meta-item"><i class="fas fa-star"></i> Rating: <span id="movie-rating"></span></div>
+              <div class="meta-item"><i class="fas fa-clock"></i> <span id="movie-runtime">120 min</span></div>
+              <div class="meta-item"><i class="fas fa-calendar"></i> <span id="movie-release">2025</span></div>
+              <div class="meta-item"><i class="fas fa-film"></i> <span id="movie-genre">Action</span></div>
+            </div>
+            <p id="movie-overview"></p>
+          </div>
+        </div>
+      </div>
+      
+      <iframe id="movie-trailer" frameborder="0" allowfullscreen></iframe>
+      
+      <h2 class="schedule-heading"><i class="fas fa-calendar-alt"></i> Movie Schedule</h2>
+      <div class="movie-schedule">
+        <table>
+          <thead>
+            <tr>
+              <th><i class="fas fa-calendar-day"></i> Day</th>
+              <th><i class="fas fa-clock"></i> Times</th>
+              <th><i class="fas fa-tv"></i> Theater</th>
+              <th><i class="fas fa-film"></i> Format</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>
+                <span class="time-chip">10:30 AM</span>
+                <span class="time-chip">1:45 PM</span>
+                <span class="time-chip">4:30 PM</span>
+                <span class="time-chip">7:15 PM</span>
+                <span class="time-chip">10:00 PM</span>
+              </td>
+              <td>Theater 1, 3</td>
+              <td>
+                <span class="format-badge format-standard">Standard</span>
+                <span class="format-badge format-3d">3D</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>
+                <span class="time-chip">10:30 AM</span>
+                <span class="time-chip">1:45 PM</span>
+                <span class="time-chip">4:30 PM</span>
+                <span class="time-chip">7:15 PM</span>
+                <span class="time-chip">10:00 PM</span>
+              </td>
+              <td>Theater 1, 3</td>
+              <td>
+                <span class="format-badge format-standard">Standard</span>
+                <span class="format-badge format-3d">3D</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>
+                <span class="time-chip">10:30 AM</span>
+                <span class="time-chip">1:45 PM</span>
+                <span class="time-chip">4:30 PM</span>
+                <span class="time-chip">7:15 PM</span>
+                <span class="time-chip">10:00 PM</span>
+              </td>
+              <td>Theater 1, 3</td>
+              <td>
+                <span class="format-badge format-standard">Standard</span>
+                <span class="format-badge format-3d">3D</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>
+                <span class="time-chip">10:30 AM</span>
+                <span class="time-chip">1:45 PM</span>
+                <span class="time-chip">4:30 PM</span>
+                <span class="time-chip">7:15 PM</span>
+                <span class="time-chip">10:00 PM</span>
+              </td>
+              <td>Theater 2, 4</td>
+              <td>
+                <span class="format-badge format-standard">Standard</span>
+                <span class="format-badge format-imax">IMAX</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>
+                <span class="time-chip">11:00 AM</span>
+                <span class="time-chip">2:00 PM</span>
+                <span class="time-chip">5:00 PM</span>
+                <span class="time-chip">8:00 PM</span>
+                <span class="time-chip">10:45 PM</span>
+              </td>
+              <td>Theater 2, 4, 5</td>
+              <td>
+                <span class="format-badge format-standard">Standard</span>
+                <span class="format-badge format-imax">IMAX</span>
+                <span class="format-badge format-3d">3D</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>
+                <span class="time-chip">11:00 AM</span>
+                <span class="time-chip">2:00 PM</span>
+                <span class="time-chip">5:00 PM</span>
+                <span class="time-chip">8:00 PM</span>
+                <span class="time-chip">10:45 PM</span>
+              </td>
+              <td>Theater 2, 4, 5</td>
+              <td>
+                <span class="format-badge format-standard">Standard</span>
+                <span class="format-badge format-imax">IMAX</span>
+                <span class="format-badge format-3d">3D</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>
+                <span class="time-chip">11:00 AM</span>
+                <span class="time-chip">2:00 PM</span>
+                <span class="time-chip">5:00 PM</span>
+                <span class="time-chip">8:00 PM</span>
+              </td>
+              <td>Theater 2, 4, 5</td>
+              <td>
+                <span class="format-badge format-standard">Standard</span>
+                <span class="format-badge format-imax">IMAX</span>
+                <span class="format-badge format-3d">3D</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="booking-container">
+        <button id="book-now" onclick="bookticket()">
+          <i class="fas fa-ticket-alt"></i> Book Now
+        </button>
+      </div>
     </div>
-    </section>
+  </section>
 
   <footer>
-      <p>© 2025 Sinéfolis. All rights reserved.</p>
+    <p>© 2025 Sinéfolis. All rights reserved.</p>
   </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/script.js"></script>
-    <script src="js/movie.js"></script>
-    <script src="js/hamburger-menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/script.js"></script>
+  <script src="js/movie.js"></script>
+  <script src="js/hamburger-menu.js"></script>
 </body>
 </html>

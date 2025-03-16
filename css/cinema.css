@@ -1,10 +1,5 @@
 .cinema-section {
   margin: 100px 0 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
   padding: 0 clamp(15px, 5vw, 50px);
   width: 100%;
 }
@@ -14,6 +9,7 @@
   width: 100%;
   padding-top: 20px;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .section-title::after {
@@ -25,6 +21,16 @@
   width: 80px;
   height: 3px;
   background-color: #e50914;
+}
+
+.swiper {
+  width: 100%;
+  padding: 30px 10px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 .cinema-card {
@@ -93,4 +99,25 @@
 
 .copy-btn:hover {
   background-color: #b50710;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #e50914;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.6;
+  background: #333;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #e50914;
+}
+
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
