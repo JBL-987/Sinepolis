@@ -133,6 +133,11 @@
     margin: 60px auto 20px auto;
   }
 
+  .cinema-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
   .section-title {
     font-size: 24px;
     margin-bottom: 1.5rem;
