@@ -27,19 +27,12 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 function copyAddress(location) {
-      navigator.clipboard.writeText(location)
+    navigator.clipboard.writeText(location)
         .then(() => {
-            Swal.fire({
-                title: "Address copied to clipboard!",
-                icon: "success"
-            });
+            alert("Address copied to clipboard!");
         })
         .catch(err => {
-          console.error("Error copying address:", err);
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Something went wrong!",
+            console.error("Error copying address:", err);
+            alert("Something went wrong!");
         });
-    });
 }

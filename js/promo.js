@@ -1,17 +1,10 @@
 function copyPromo(code) {
-      navigator.clipboard.writeText(code)
+    navigator.clipboard.writeText(code)
         .then(() => {
-            Swal.fire({
-                title: "Promo code copied to clipboard!",
-                icon: "success"
-            });
+            alert("Promo code copied to clipboard!");
         })
         .catch(err => {
             console.error("Error copying promo code:", err);
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Something went wrong!",
+            alert("Something went wrong!");
         });
-    });
 }

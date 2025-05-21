@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Now Showing - Sinéfolis</title>
-    <link rel="icon" href="/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -14,51 +13,93 @@
 </head>
 <body>
   <nav>
-  <div class="hamburger-menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-   </div>
-     <img src="/images/logo.jpeg" alt="Sinéfolis">
-    <ul>
-      <li>
-        <a href="/"><i class="fas fa-home"></i> Home</a>
-      </li>
-      <li>
-        <a href="promo.html"><i class="fas fa-tags"></i> Promo</a>
-      </li>
-      <li>
-        <a href="now-showing.html"><i class="fas fa-film"></i> Now Showing</a>
-      </li>
-      <li>
-        <a href="cinema.html"><i class="fas fa-ticket"></i> Cinema</a>
-      </li>
-      <li>
-        <a href="feedback.html"><i class="fas fa-comment"></i> Feedback</a>
-      </li>
+    <div class="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <img src="images/logo.jpeg" alt="Sinéfolis" class="logo">
+    <ul class="nav-links">
+      <li><a href="/Sinepolis/index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="promo.html"><i class="fas fa-tags"></i> Promo</a></li>
+      <li><a href="now-showing.html" class="active"><i class="fas fa-film"></i> Now Showing</a></li>
+      <li><a href="cinema.html"><i class="fas fa-ticket"></i> Cinema</a></li>
+      <li><a href="feedback.html"><i class="fas fa-comment"></i> Feedback</a></li>
     </ul>
   </nav>
 
-  <section class="hero">
-    <div class="background-poster">
-    <section id="in-theaters" class="in-theaters">
-    <h1>Now Showing</h1>
-    <h2>Click the poster for more info</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper"></div>
-    </div>
-    </div>
-  </section>
+  <main class="now-showing-container">
+    <div class="background-poster"></div>
+    
+    <section class="movies-section">
+      <h1 class="section-title">Now Showing</h1>
+      <div class="slider-container">
+        <div class="slider-track" id="now-playing-slider"></div>
+      </div>
+      <div class="movie-grid" id="now-showing-grid"></div>
+    </section>
+
+    <section class="movies-section">
+      <h1 class="section-title">Coming Soon</h1>
+      <div class="slider-container">
+        <div class="slider-track" id="upcoming-slider"></div>
+      </div>
+      <div class="movie-grid" id="upcoming-grid"></div>
+    </section>
+  </main>
+
+  <div id="movie-detail" class="movie-detail-modal"></div>
 
   <footer>
-    <p>© 2025 Sinéfolis. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="now-showing.html">Now Showing</a></li>
+          <li><a href="#">Coming Soon</a></li>
+          <li><a href="cinema.html">Cinemas</a></li>
+          <li><a href="promo.html">Promotions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Information</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="newsletter">
+          <input type="email" placeholder="Your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Sinéfolis Cinemas. All Rights Reserved.</p>
+      <div class="payment-methods">
+        <img src="images/visa.png" alt="Visa">
+        <img src="images/mastercard.png" alt="Mastercard">
+        <img src="images/paypal.png" alt="PayPal">
+      </div>
+    </div>
   </footer>
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/swipper.js"></script>  
-    <script src="js/hamburger-menu.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/hamburger-menu.js"></script>
 </body>
 </html>
