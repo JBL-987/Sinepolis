@@ -207,4 +207,78 @@
     min-height: 60px;
     font-size: 12px;
   }
+
+  .movie-grid {
+    gap: 18px;
+    padding-bottom: 10px;
+  }
+  .movie-card {
+    min-width: 140px;
+    max-width: 160px;
+    border-radius: 12px;
+  }
+  .movie-card img {
+    height: 170px;
+    border-radius: 12px 12px 0 0;
+  }
+  .movie-card .movie-info {
+    padding: 0.5rem;
+  }
+  .movie-card h2 {
+    font-size: 1rem !important;
+  }
+  .movie-card .genre,
+  .movie-card .rating {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .now-showing-container {
+    padding: 1rem;
+  }
+  .movies-section {
+    padding: 1rem;
+  }
+  .movie-card {
+    min-width: 160px;
+    max-width: 160px;
+  }
+  .movie-card img {
+    height: 210px;
+  }
+  .movie-card .movie-info {
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-grid {
+    flex-direction: column !important;
+    gap: 16px;
+    overflow-x: unset;
+    overflow-y: visible;
+    align-items: center;
+  }
+  .movie-card {
+    min-width: 90vw;
+    max-width: 95vw;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  .movie-card img {
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+  .movie-card .movie-info {
+    padding: 0.4rem;
+  }
+  .movie-card h2 {
+    font-size: 0.9rem !important;
+  }
+  .movie-card .genre,
+  .movie-card .rating {
+    font-size: 0.8rem !important;
+  }
 }

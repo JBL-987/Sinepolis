@@ -1,206 +1,173 @@
 const MOVIES_DATA = {
-    now_playing: [
-      {
-        id: 1,
-        title: "Dune: Part Two (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BZGFkNjQ0ZGItZTU5YS00N2I2LWIzNDEtNmM0NjI5NDM4NjU5XkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_.jpg",
-        overview: "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
-        rating: "8.5/10",
-        trailer: "https://www.youtube.com/embed/U2Qp5pL3ovA",
-        duration: "2h 46m",
-        genre: "Sci-Fi, Adventure"
-      },
-      {
-        id: 2,
-        title: "The Batman (2022)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BZmY2MzYzNTItMGEyOC00YjYyLTg5NDUtMTE1ODQ4ZDM1OTRkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-        overview: "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
-        rating: "7.9/10",
-        trailer: "https://www.youtube.com/embed/mqqft2x_Aa4",
-        duration: "2h 56m",
-        genre: "Action, Crime"
-      },
-      {
-        id: 3,
-        title: "Avatar: The Way of Water (2022)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX1000_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjY1MjkzMjE@._V1_.jpg",
-        overview: "Jake Sully lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
-        rating: "7.6/10",
-        trailer: "https://www.youtube.com/embed/d9MyW72ELq0",
-        duration: "3h 12m",
-        genre: "Sci-Fi, Adventure"
-      },
-      {
-        id: 4,
-        title: "Top Gun: Maverick (2022)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BODJlMzNlZWItYzc5OC00YzVlLThhZDMtM2FmNjE0ZTFmZWUyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
-        overview: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-        rating: "8.3/10",
-        trailer: "https://www.youtube.com/embed/giXco2jaZ_4",
-        duration: "2h 11m",
-        genre: "Action, Drama"
-      },
-      {
-        id: 5,
-        title: "Spider-Man: No Way Home (2021)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNzgwNTVjYWQtNTY3YS00NzIzLTgxZDAtN2FmZjI5ZjU3ZDViXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
-        overview: "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
-        rating: "8.2/10",
-        trailer: "https://www.youtube.com/embed/JfVOs4VSpmA",
-        duration: "2h 28m",
-        genre: "Action, Adventure"
-      },
-      {
-        id: 6,
-        title: "Godzilla x Kong: The New Empire (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BMjA1YjYwYjUtYjQxNC00YjYyLWIwYjktYjYwYjYwYjYwYjYwXkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_FMjpg_UX1000_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BMjA1YjYwYjUtYjQxNC00YjYyLWIwYjktYjYwYjYwYjYwYjYwXkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_.jpg",
-        overview: "Godzilla and Kong must unite against a colossal undiscovered threat hidden within the world, challenging their very existence and the survival of the human race.",
-        rating: "7.8/10",
-        trailer: "https://www.youtube.com/embed/odM92ap8_c0",
-        duration: "1h 55m",
-        genre: "Action, Sci-Fi"
-      },
-      {
-        id: 7,
-        title: "Ghostbusters: Frozen Empire (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BODJlMzNlZWItYzc5OC00YzVlLThhZDMtM2FmNjE0ZTFmZWUyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BODJlMzNlZWItYzc5OC00YzVlLThhZDMtM2FmNjE0ZTFmZWUyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
-        overview: "The Spengler family returns to New York to team up with the original Ghostbusters, who've developed a secret research lab to take their ghost-busting to the next level.",
-        rating: "7.1/10",
-        trailer: "https://www.youtube.com/embed/EQz-I1QkbIg",
-        duration: "1h 55m",
-        genre: "Comedy, Fantasy, Action"
-      },
-      {
-        id: 8,
-        title: "Oppenheimer (2023)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNTE2MDcwNTc0N15BMl5BanBnXkFtZTgwMTY0Mzk4NzE@._V1_.jpg",
-        overview: "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II, exploring the ethical challenges he faced in creating history's most destructive weapon.",
-        rating: "8.4/10",
-        trailer: "https://www.youtube.com/embed/uYPbbksJxIg",
-        duration: "3h 00m",
-        genre: "Biography, Drama, History"
-      },
-      {
-        id: 9,
-        title: "Barbie (2023)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc4LTk1NTQtMmUxNTljM2I0NDA5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNzZmOTU1ZTEtYzVhNi00NzQxLWI5ZjAtNWNhNjEwY2E3YmZjXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
-        overview: "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
-        rating: "7.0/10",
-        trailer: "https://www.youtube.com/embed/8zIf0XvoL9Y",
-        duration: "1h 54m",
-        genre: "Adventure, Comedy, Fantasy"
-      },
-      {
-        id: 10,
-        title: "Furiosa: A Mad Max Saga (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BNmFlMjY0YmUtMzg2MC00YjQ5LThhM2QtYmE5MDRiNmNlODRiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNDQxZjhlZDEtMzE0OS00ZWUxLTk4YTMtNWY0MjUwMTQ5MDM5XkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
-        overview: "The origin story of renegade warrior Furiosa before her encounter with Mad Max. As the world falls, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus.",
-        rating: "8.7/10",
-        trailer: "https://www.youtube.com/embed/XdvDDVejVpU",
-        duration: "2h 28m",
-        genre: "Action, Adventure, Sci-Fi"
-      },
-      {
-        id: 11,
-        title: "The Fall Guy (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BMThlOWE3MWEtN2Y1ZC00MDgzLWJmZjgtNDg1ZDA3OGYwZWVlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNzg5OTM5OTMzMV5BMl5BanBnXkFtZTgwMDQ4MzE0MjE@._V1_.jpg",
-        overview: "Colt Seavers, a battle-scarred stuntman who, having left the business a year earlier to focus on both his physical and mental health, is drafted back into service when the star of a mega-budget studio film goes missing.",
-        rating: "7.4/10",
-        trailer: "https://www.youtube.com/embed/nM4iy0reaCA",
-        duration: "2h 06m",
-        genre: "Action, Comedy"
-      },
-      {
-        id: 12,
-        title: "Kingdom of the Planet of the Apes (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BNDkyOTkyMzctMzYwOC00ZDljLWE0MTktZDBmMGJlMmRlZjlmXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BYmY5Y2Q3ZTEtZTJlNy00YmQ0LTk1NWEtNGI3YTJmYjVhZDU4XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
-        overview: "Many years after the reign of Caesar, a young ape goes on a journey that will lead him to question everything he's been taught about the past and make choices that will define a future for apes and humans alike.",
-        rating: "8.0/10",
-        trailer: "https://www.youtube.com/embed/Sa83T-ZOeR4",
-        duration: "2h 25m",
-        genre: "Action, Adventure, Sci-Fi"
-      }
-    ],
-    upcoming: [
-      {
-        id: 101,
-        title: "Minecraft: The Movie (2025)",
-        poster_path: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7e/Minecraft_movie_logo.png",
-        backdrop_path: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7e/Minecraft_movie_logo.png",
-        overview: "A teenage girl and her unlikely group of adventurers must save their blocky Overworld from the Ender Dragon.",
-        rating: "-",
-        trailer: "",
-        duration: "-",
-        genre: "Adventure, Family, Fantasy"
-      },
-      {
-        id: 102,
-        title: "Thunderbolts (2025)",
-        poster_path: "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/06/thunderbolts-movie-logo.jpg",
-        backdrop_path: "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/06/thunderbolts-movie-logo.jpg",
-        overview: "A group of antiheroes and villains are recruited by the government for a dangerous mission.",
-        rating: "-",
-        trailer: "",
-        duration: "-",
-        genre: "Action, Adventure, Sci-Fi"
-      },
-      {
-        id: 103,
-        title: "Inside Out 2 (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BOTNjNWRjZDUtYjU1OC00NGFmLWE1ZjYtYzU5YjFlNjMyYzY1XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BYWFiMGQwNmMtNjVhMS00ZWUwLTkzZTYtMDdmNzU1OWFmNTgwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-        overview: "Riley, now a teenager, receives an unexpected visit from new emotions that shake things up in her mind Headquarters as she navigates the challenges of adolescence.",
-        rating: "-",
-        trailer: "https://www.youtube.com/embed/VKFoQFMS5ew",
-        duration: "1h 36m",
-        genre: "Animation, Adventure, Comedy"
-      },
-      {
-        id: 104,
-        title: "Deadpool & Wolverine (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BODllMGI5ODMtOGI3ZS00YTYzLWJjMzQtYjJiYjJmMmY5NjZjXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNmUzY2QyZjQtZGFmMy00MzgzLWJiODEtNDY0YjQ5NTRmZGYxXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
-        overview: "Wolverine joins forces with the unconventional and loudmouthed Deadpool on a dangerous mission that will take them across the multiverse.",
-        rating: "-",
-        trailer: "https://www.youtube.com/embed/6YGYPSz02Y8",
-        duration: "2h 07m",
-        genre: "Action, Adventure, Comedy"
-      },
-      {
-        id: 105,
-        title: "A Quiet Place: Day One (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BMTMxYzNmODQtNmM5Yi00NjU1LTgyODctN2E1ZmNlZTQ5YWRlXkEyXkFqcGdeQXVyMTAyMjQ3NzQ1._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNmE4MjkxNmUtNjFkMC00NDE2LTkzMmUtNjJiMTAxOTQyNGFjXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
-        overview: "Experience the day the world went quiet, following a new character in New York City during the terrifying first days of the alien invasion.",
-        rating: "-",
-        trailer: "https://www.youtube.com/embed/S_1TU-6ng6o",
-        duration: "1h 39m",
-        genre: "Horror, Sci-Fi, Thriller"
-      },
-      {
-        id: 106,
-        title: "Venom: The Last Dance (2024)",
-        poster_path: "https://m.media-amazon.com/images/M/MV5BOWVkOTQ1YmEtY2YzMC00OWI3LTkzNTQtZDI0ZTc5YWVmOTQxXkEyXkFqcGdeQXVyMTUzOTczNzYx._V1_.jpg",
-        backdrop_path: "https://m.media-amazon.com/images/M/MV5BNTViNzUwMTgtOWQyZi00ZDY0LWFkZTktYzk5YjBjOThlZTgzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-        overview: "Eddie Brock and Venom face their most dire challenge yet as they confront a terrifying new threat that may force them apart.",
-        rating: "-",
-        trailer: "https://www.youtube.com/embed/c7kXD3qrZ2A",
-        duration: "2h 10m",
-        genre: "Action, Adventure, Sci-Fi"
-      }
-    ]
+  now_playing: [
+    {
+      id: 201,
+      title: "Parasite (2019)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BNDgxNjQ4MzY5N15BMl5BanBnXkFtZTgwNzU4NTkyODE@._V1_.jpg",
+      overview: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+      rating: "8.5/10",
+      trailer: "https://www.youtube.com/embed/SEUXfv87Wpk",
+      duration: "2h 12m",
+      genre: "Drama, Thriller"
+    },
+    {
+      id: 202,
+      title: "Joker (2019)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BMGQ1ZGZmNTAtM2MyYi00NmZhLTkwYmYtNTNlZDRhMzU2ZTgwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      overview: "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime.",
+      rating: "8.4/10",
+      trailer: "https://www.youtube.com/embed/zAGVQLHvwOY",
+      duration: "2h 2m",
+      genre: "Crime, Drama, Thriller"
+    },
+    {
+      id: 203,
+      title: "1917 (2019)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BZjEzOGRhNzctNGMzNi00OWQzLWI3YTEtMTQ4YzUzZTRmMWZlXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg",
+      overview: "Two young British soldiers during the First World War are given an impossible mission: deliver a message deep in enemy territory.",
+      rating: "8.2/10",
+      trailer: "https://www.youtube.com/embed/YqNYrYUiMfg",
+      duration: "1h 59m",
+      genre: "Drama, War"
+    },
+    {
+      id: 204,
+      title: "Knives Out (2019)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BNGNlM2VlOTctZDIxOC00ZWY5LTg1ZjEtOTNmODdmYWZiZGU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      overview: "A detective investigates the death of a patriarch of an eccentric, combative family.",
+      rating: "7.9/10",
+      trailer: "https://www.youtube.com/embed/qGqiHJTsRkQ",
+      duration: "2h 10m",
+      genre: "Comedy, Crime, Drama"
+    },
+    {
+      id: 205,
+      title: "Tenet (2020)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BOTU0OWJlYzMtNWY5OC00NjM0LThmNDItYTMyMDRmZTY5NDdmXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_.jpg",
+      overview: "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage.",
+      rating: "7.3/10",
+      trailer: "https://www.youtube.com/embed/L3pk_TBkihU",
+      duration: "2h 30m",
+      genre: "Action, Sci-Fi"
+    },
+  ],
+  upcoming: [
+    {
+      id: 1,
+      title: "The Matrix Resurrections (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BMGJkNDJlZWUtOGM1Ny00YjNkLThiM2QtY2ZjMzQxMTIxNWNmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BNzNlZTZjMDktZjYwNi00NzZlLWI2MTgtZGRhNDA0YjgwM2I5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+      overview: "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.",
+      rating: "5.7/10",
+      trailer: "https://www.youtube.com/embed/9ix7TUGVYIo",
+      duration: "2h 28m",
+      genre: "Sci-Fi, Action"
+    },
+    {
+      id: 2,
+      title: "No Time to Die (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BYWQ2NzQ1NjktMzNkNS00MGY1LTgwMmMtYTllYTI5YzNmMmE0XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BNGEyYjU3N2QtYzE5YS00YWI3LTkzNDYtYzM3Y2VlYjY0ZGRhXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
+      overview: "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+      rating: "7.3/10",
+      trailer: "https://www.youtube.com/embed/BIhNsAtPbPI",
+      duration: "2h 43m",
+      genre: "Action, Adventure, Thriller"
+    },
+    {
+      id: 3,
+      title: "The Suicide Squad (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BNGM3YzdlOWYtNjViZS00MTE2LWE1MWUtZmE2ZTcxZjcyMmU3XkEyXkFqcGdeQXVyODEyMTI1MjA@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BZjBiOGIyY2YtOTA3OC00YzY1LThkYjktMGRkYTNhNTExY2I2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+      overview: "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+      rating: "7.2/10",
+      trailer: "https://www.youtube.com/embed/jz1FrtMIh5c",
+      duration: "2h 12m",
+      genre: "Action, Adventure, Comedy"
+    },
+    {
+      id: 4,
+      title: "Shang-Chi and the Legend of the Ten Rings (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BMzIwNDQzNTEtYmY0MS00NTQyLWJhY2UtYzAwY2U1ZTNhNzEwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+      overview: "Martial-arts master Shang-Chi confronts the past he thought he left behind when he's drawn into the web of the mysterious Ten Rings organization.",
+      rating: "7.4/10",
+      trailer: "https://www.youtube.com/embed/8YjFbMbfXaQ",
+      duration: "2h 12m",
+      genre: "Action, Adventure, Fantasy"
+    },
+    {
+      id: 5,
+      title: "Black Widow (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BNjRmNDI5MjMtMmFhZi00YzcwLWI4ZGItMGI2MjI0N2Q3YmIwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BOWVmZGQ0MGYtMDI1Yy00MDkxLWJiYjQtMmZjZmQ0NDFmMDRhXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg",
+      overview: "Natasha Romanoff, aka Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises.",
+      rating: "6.7/10",
+      trailer: "https://www.youtube.com/embed/RxAtuMu_ph4",
+      duration: "2h 14m",
+      genre: "Action, Adventure, Sci-Fi"
+    },
+    {
+      id: 6,
+      title: "Eternals (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BMTExZmVjY2ItYTAzYi00MDdlLWFlOWItNTJhMDRjMzQ5ZGY0XkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BOTYzMTlhNTAtYjE1ZS00ZjQwLWJjMWMtNzUwYzI0YzgyOWNiXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg",
+      overview: "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.",
+      rating: "6.3/10",
+      trailer: "https://www.youtube.com/embed/x_me3xsvDgk",
+      duration: "2h 37m",
+      genre: "Action, Adventure, Fantasy"
+    },
+    {
+      id: 7,
+      title: "Dune (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BMDQ0NjgyN2YtNWViNS00YjA3LTkxNDktYzFkZTExZGMxZDkxXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+      overview: "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+      rating: "8.0/10",
+      trailer: "https://www.youtube.com/embed/n9xhJrPXop4",
+      duration: "2h 35m",
+      genre: "Sci-Fi, Adventure"
+    },
+    {
+      id: 8,
+      title: "The French Dispatch (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BNmQxZTNiODYtNzBhYy00MzVlLWJlN2UtNTc4YWZjMDIwMmEzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BZTFhMDdmODEtN2UwOS00ZjQwLTgxMGYtM2JlMGM3YTUyM2FjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+      overview: "A love letter to journalists set in an outpost of an American newspaper in a fictional 20th-century French city that brings to life a collection of stories published in 'The French Dispatch' magazine.",
+      rating: "7.2/10",
+      trailer: "https://www.youtube.com/embed/TcPk2p0Zaw4",
+      duration: "1h 48m",
+      genre: "Comedy, Drama, Romance"
+    },
+    {
+      id: 9,
+      title: "Last Night in Soho (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BZjgwZDIwY2MtNGZlNy00NGRlLWFmNTgtOTBkZThjMDUwMGJhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BNDVhYjE1YzktZTk2Ny00MGY1LWIzOWQtOWFkM2M1OTI3YzVkXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+      overview: "An aspiring fashion designer is mysteriously able to enter the 1960s where she encounters a dazzling wannabe singer. But the glamour is not all it appears to be and the dreams of the past start to crack and splinter into something darker.",
+      rating: "7.1/10",
+      trailer: "https://www.youtube.com/embed/AcVnFrxjPjI",
+      duration: "1h 56m",
+      genre: "Horror, Mystery, Thriller"
+    },
+    {
+      id: 10,
+      title: "Free Guy (2021)",
+      poster_path: "https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
+      backdrop_path: "https://m.media-amazon.com/images/M/MV5BOWVmZGQ0MGYtMDI1Yy00MDkxLWJiYjQtMmZjZmQ0NDFmMDRhXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg",
+      overview: "A bank teller discovers he is actually a background player in an open-world video game, and decides to become the hero of his own story.",
+      rating: "7.1/10",
+      trailer: "https://www.youtube.com/embed/X2m-08cOAbc",
+      duration: "1h 55m",
+      genre: "Action, Adventure, Comedy"
+    },
+  ]
 };
 
 const renderMovies = (movies, containerId) => {
@@ -262,7 +229,6 @@ const renderMovieGrid = (movies, containerId) => {
                 <div class="rating" style="color:#e50914;font-weight:bold;font-size:1rem;margin-bottom:4px;">${movie.rating}</div>
             </div>
         `;
-        // Saat poster diklik, tampilkan modal detail (overview, trailer, dsb)
         card.querySelector('.movie-poster-preview').onclick = () => showMovieDetail(movie.id);
         container.appendChild(card);
     });
